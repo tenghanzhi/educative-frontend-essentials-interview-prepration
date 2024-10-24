@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Source Code Display</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        overflow-x: auto;
+      }
+      code {
+        font-family: monospace;
+        color: #d63384;
+      }
+      .separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+      }
+      .separator hr {
+        border: none;
+        height: 1px;
+        width: 40%;
+        background: linear-gradient(to right, #ccc, #333, #ccc);
+      }
+      .separator span {
+        margin: 0 10px;
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+      }
+      .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .nav-buttons a {
+        background-color: #d63384;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .nav-buttons a:hover {
+        background-color: #c02672;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p>
+        In my younger and more vulnerable years my father gave me some advice
+        that I've been turning over in my mind ever since.
+        <q>Whenever you feel like criticizing any one,</q> he told me,
+        <q>just remember that all the people in this world haven't had the
+          advantages that you've had.</q>
+      </p>
+      <p>
+        Reserving judgements is a matter of <i>infinite</i> hope.
+      </p>
+      <p>
+        There was something unique about Gatsby:
+        <pre>
+          He smiled understandingly-much more than understandingly. It was one of those rare smiles 
+          with a quality of eternal reassurance in it, that you may come across four or five times 
+          in life. It faced--or seemed to face--the whole eternal world for an instant, and 
+          then concentrated on you with an irresistible prejudice in your favor. 
+          It understood you just as far as you wanted to be understood, believed in you as you would 
+          like to believe in yourself, and assured you that it had precisely the impression of you 
+          that, at your best, you hoped to convey.
+        </pre>
+      </p>
+      <p>
+        “And as I sat there brooding on the old, unknown world, I thought of Gatsby’s wonder when
+        he first picked out the green light at the end of Daisy’s dock. He had come a long way to 
+        this blue lawn, and his dream must have seemed so close that he could hardly fail to grasp it.
+        He did not know that it was already behind him, somewhere back in that vast obscurity beyond 
+        the city, where the dark fields of the republic rolled on under the night.
+        <u>Gatsby believed in the green light,</u> the orgastic future that year by year recedes before 
+        us. It eluded us then, but that's no matter—to-morrow we will run faster, stretch out our 
+        arms farther. . . And one fine morning——
+      </p>
+      <p>
+        <em>So we beat on, boats against the current, borne back ceaselessly into the past.</em>
+      </p>
+      <p>
+        <q>Life starts all over again when it gets crisp in the fall.</q> ― F. Scott Fitzgerald,
+        The Great Gatsby
+      </p>
+    </div>
+
+    <div class="separator">
+      <hr />
+      <span>Source Code Preview</span>
+      <hr />
+    </div>
+
+    <pre><code>
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;p&gt; 
+         In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+         &lt;q&gt;Whenever you feel like criticizing any one,&lt;/q&gt; he told me, 
+         &lt;q&gt;just remember that all the people in this world haven't had the advantages that you've had.&lt;/q&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+         Reserving judgements is a matter of &lt;i&gt;infinite&lt;/i&gt; hope.
+      &lt;/p&gt;
+      &lt;p&gt;
+         There was something unique about Gatsby:
+        &lt;pre&gt; He smiled understandingly-much more than understandingly. It was one of those rare smiles 
+         with a quality of eternal reassurance in it, that you may come across four or five times 
+         in life. It faced--or seemed to face--the whole eternal world for an instant, and 
+         then concentrated on you with an irresistible prejudice in your favor. 
+         It understood you just as far as you wanted to be understood, believed in you as you would 
+         like to believe in yourself, and assured you that it had precisely the impression of you 
+         that, at your best, you hoped to convey. &lt;/pre&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+         “And as I sat there brooding on the old, unknown world, I thought of Gatsby’s wonder when
+          he first picked out the green light at the end of Daisy’s dock. He had come a long way to 
+          this blue lawn, and his dream must have seemed so close that he could hardly fail to grasp it.
+          He did not know that it was already behind him, somewhere back in that vast obscurity beyond the city,
+          where the dark fields of the republic rolled on under the night.
+          &lt;u&gt;Gatsby believed in the green light,&lt;/u&gt; the orgastic future that year by year recedes before us. 
+          It eluded us then, but that's no matter—to-morrow we will run faster, 
+          stretch out our arms farther. . . And one fine morning——
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;em&gt; So we beat on, boats against the current, borne back ceaselessly into the past. &lt;/em&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+         &lt;q&gt;Life starts all over again when it gets crisp in the fall.&lt;/q&gt;
+         ― F. Scott Fitzgerald, The Great Gatsby
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+
+    <div class="separator">
+      <hr />
+      <span>Bottom</span>
+      <hr />
+    </div>
+
+    <div class="nav-buttons">
+      <a href="./Challenge3.html">Previous Challenge</a>
+      <a href="../index.html">Back to Challenges</a>
+      <a href="./Challenge4.html">Next Challenge</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurants in Vancouver</title>
+    <style>
+      html {
+        font-family: "Lato";
+        margin: 20px auto;
+        max-width: 600px;
+        font-size: 1.25em;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        padding: 5px 10px;
+        margin: 5px 0;
+        color: white;
+        border-radius: 5px;
+      }
+      .hint {
+        margin-right: 30px;
+        display: inline-block;
+      }
+      span.french,
+      span.can,
+      span.italian {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        display: inline-block;
+        float: left;
+        margin-top: 5px;
+        margin-right: 5px;
+      }
+      span.french {
+        background: tomato;
+      }
+      span.can {
+        background: #392cf1;
+      }
+      span.italian {
+        background: #b332c4;
+      }
+      li[data-type="can"] {
+        background: #392cf1;
+      }
+      li[data-type="french"] {
+        background: tomato;
+      }
+      li[data-type="italian"] {
+        background: #b332c4;
+      }
+      .separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+      }
+      .separator hr {
+        border: none;
+        height: 1px;
+        width: 40%;
+        background: linear-gradient(to right, #ccc, #333, #ccc);
+      }
+      .separator span {
+        margin: 0 10px;
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+      }
+      .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .nav-buttons a {
+        background-color: #d63384;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .nav-buttons a:hover {
+        background-color: #c02672;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Restaurants in Vancouver</h2>
+    <div class="hint"><span class="can"></span><span>Canadian</span></div>
+    <div class="hint"><span class="french"></span><span>French</span></div>
+    <div class="hint"><span class="italian"></span><span>Italian</span></div>
+    <ul>
+      <li data-type="can" data-distance="2miles" data-identifier="10318">
+        Marketplace on 3rd
+      </li>
+      <li data-type="french" data-distance="3miles" data-identifier="10318">
+        Absinthe Bistro
+      </li>
+      <li data-type="can" data-distance="1mile" data-identifier="10318">
+        Salmon n' Bannock Bistro
+      </li>
+      <li data-type="can" data-distance="4miles" data-identifier="10548">
+        Blue Water Cafe
+      </li>
+      <li data-type="italian" data-distance="3miles" data-identifier="10318">
+        Marcello Pizzeria
+      </li>
+      <li data-type="french" data-distance="1mile" data-identifier="10318">
+        Five Sails Restaurant
+      </li>
+      <li data-type="can" data-distance="2miles" data-identifier="12315">
+        Bacchus Restaurant & Lounge
+      </li>
+      <li data-type="italian" data-distance="1mile" data-identifier="10318">
+        Rocky Mountain Flatbread Main Street
+      </li>
+      <li data-type="italian" data-distance="2miles" data-identifier="12315">
+        Giardino Restaurant
+      </li>
+    </ul>
+
+    <!-- Modern separator with a gradient line and text in between -->
+    <div class="separator">
+      <hr />
+      <span>Source Code Preview</span>
+      <hr />
+    </div>
+
+    <pre><code>
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;h2&gt;Restaurants in Vancouver&lt;/h2&gt;
+      &lt;div class="hint"&gt;&lt;span class="can"&gt;&lt;/span&gt;&lt;span&gt;Canadian&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="hint"&gt;&lt;span class="french"&gt;&lt;/span&gt;&lt;span&gt;French&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="hint"&gt;&lt;span class="italian"&gt;&lt;/span&gt;&lt;span&gt;Italian&lt;/span&gt;&lt;/div&gt;
+      &lt;ul&gt;
+         &lt;li data-type="can" data-distance="2miles" data-identifier="10318"&gt;Marketplace on 3rd&lt;/li&gt;
+         &lt;li data-type="french" data-distance="3miles" data-identifier="10318"&gt;Absinthe Bistro&lt;/li&gt;
+         &lt;li data-type="can" data-distance="1mile" data-identifier="10318"&gt;Salmon n' Bannock Bistro&lt;/li&gt;
+         &lt;li data-type="can" data-distance="4miles" data-identifier="10548"&gt;Blue Water Cafe&lt;/li&gt;
+         &lt;li data-type="italian" data-distance="3miles" data-identifier="10318"&gt;Marcello Pizzeria&lt;/li&gt;
+         &lt;li data-type="french" data-distance="1mile" data-identifier="10318"&gt;Five Sails Restaurant&lt;/li&gt;
+         &lt;li data-type="can" data-distance="2miles" data-identifier="12315"&gt;Bacchus Restaurant & Lounge&lt;/li&gt;
+         &lt;li data-type="italian" data-distance="1mile" data-identifier="10318"&gt;Rocky Mountain Flatbread Main Street&lt;/li&gt;
+         &lt;li data-type="italian" data-distance="2miles" data-identifier="12315"&gt;Giardino Restaurant&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+
+    <div class="separator">
+      <hr />
+      <span>Bottom</span>
+      <hr />
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+      <a href="./Challenge4.html">Previous Challenge</a>
+      <a href="../index.html">Back to Challenges</a>
+    </div>
+  </body>
+</html>

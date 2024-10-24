@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display HTML and Raw Code</title>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.0.js"
+    ></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        overflow-x: auto;
+      }
+      code {
+        font-family: monospace;
+        color: #d63384;
+      }
+      .separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+      }
+      .separator hr {
+        border: none;
+        height: 1px;
+        width: 40%;
+        background: linear-gradient(to right, #ccc, #333, #ccc);
+      }
+      .separator span {
+        margin: 0 10px;
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+      }
+      .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .nav-buttons a {
+        background-color: #d63384;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .nav-buttons a:hover {
+        background-color: #c02672;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <hgroup>
+        <h1>Learning Web Development</h1>
+        <h2>
+          A site dedicated to learning how to develop applications for the web.
+        </h2>
+      </hgroup>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About This Site</a></li>
+          <li><a href="">Contact Information</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <article>
+      <hgroup>
+        <h1>Using Semantic HTML Elements</h1>
+        <h2>
+          A complete guide on indicating meaning for your web page's content
+        </h2>
+        <h3><time datetime="2019-06-10">June 10, 2019</time></h3>
+      </hgroup>
+
+      <section>
+        <h4><code>header</code></h4>
+        <p>
+          Use header elements for content that is consistent across your web
+          page.
+        </p>
+        <p>Headers may also contain your site's navigation components.</p>
+      </section>
+
+      <section>
+        <h4><code>footer</code></h4>
+        <p>
+          Use footer elements to store "footer" content, like author/copyright
+          info.
+        </p>
+      </section>
+
+      <section>
+        <h4><code>nav</code></h4>
+        <p>
+          Use nav elements to store elements associated with site navigation.
+        </p>
+        <p>
+          Navigational <code>anchor</code> tags are often wrapped in an
+          unordered list element.
+        </p>
+      </section>
+    </article>
+
+    <footer>
+      <p>&copy; Educative.io 2020</p>
+    </footer>
+
+    <div class="separator">
+      <hr />
+      <span>Code Preview</span>
+      <hr />
+    </div>
+
+    <pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-1.12.0.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;hgroup&gt;
+        &lt;h1&gt;Learning Web Development&lt;/h1&gt;
+        &lt;h2&gt;A site dedicated to learning how to develop applications for the web.&lt;/h2&gt;
+      &lt;/hgroup&gt;
+      &lt;nav&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot;&gt;About This Site&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;&quot;&gt;Contact Information&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;article&gt;
+      &lt;hgroup&gt;
+        &lt;h1&gt;Using Semantic HTML Elements&lt;/h1&gt;
+        &lt;h2&gt;A complete guide on indicating meaning for your web page&#39;s content&lt;/h2&gt;
+        &lt;h3&gt;&lt;time datetime=&quot;2019-06-10&quot;&gt;June 10, 2019&lt;/time&gt;&lt;/h3&gt;
+      &lt;/hgroup&gt;
+      &lt;section&gt;
+        &lt;h4&gt;&lt;code&gt;header&lt;/code&gt;&lt;/h4&gt;
+        &lt;p&gt;Use header elements for content that is consistent across your web page.&lt;/p&gt;
+        &lt;p&gt;Headers may also contain your site&#39;s navigation components.&lt;/p&gt;
+      &lt;/section&gt;
+      &lt;section&gt;
+        &lt;h4&gt;&lt;code&gt;footer&lt;/code&gt;&lt;/h4&gt;
+        &lt;p&gt;Use footer elements to store &quot;footer&quot; content, like author/copyright info.&lt;/p&gt;
+      &lt;/section&gt;
+      &lt;section&gt;
+        &lt;h4&gt;&lt;code&gt;nav&lt;/code&gt;&lt;/h4&gt;
+        &lt;p&gt;Use nav elements to store elements associated with site navigation.&lt;/p&gt;
+        &lt;p&gt;Navigational &lt;code&gt;anchor&lt;/code&gt; tags are often wrapped in an unordered list element.&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/article&gt;
+    &lt;footer&gt;
+      &lt;p&gt;&amp;copy; Educative.io 2020&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+
+    <div class="separator">
+      <hr />
+      <span>Bottom</span>
+      <hr />
+    </div>
+
+    <div class="nav-buttons">
+      <a href="../index.html">Back to Challenges</a>
+      <a href="./Challenge2.html">Next Challenge</a>
+    </div>
+  </body>
+</html>
