@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educative - Interactive Courses for Software Developers</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        position: relative;
+        border-radius: 5px;
+        background-color: #e7e3f3;
+        padding: 20px 0 30px 0;
+      }
+
+      button,
+      input,
+      .btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        margin: 5px 0;
+        opacity: 0.85;
+        display: inline-block;
+        font-size: 17px;
+        line-height: 20px;
+        text-decoration: none;
+      }
+
+      input:hover,
+      .btn:hover {
+        opacity: 1;
+      }
+
+      .fb {
+        background-color: #3b5998;
+        color: white;
+      }
+
+      .twitter {
+        background-color: #55acee;
+        color: white;
+      }
+
+      .linkedin {
+        background-color: #0e1b4a;
+        color: white;
+      }
+
+      input[type="submit"] {
+        background-color: #6d37bc;
+        color: white;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .col {
+        float: left;
+        width: 50%;
+        margin: auto;
+        padding: 0 50px;
+        margin-top: 6px;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .vl {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        border: 2px solid #ddd;
+        height: 175px;
+      }
+
+      .vl-innertext {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        padding: 8px 10px;
+      }
+
+      .hide-md-lg {
+        display: none;
+      }
+
+      .bottom-container {
+        text-align: center;
+        background-color: #37169ab2;
+        border-radius: 0px 0px 4px 4px;
+      }
+
+      @media screen and (max-width: 650px) {
+        .col {
+          width: 100%;
+          margin-top: 0;
+        }
+        .vl {
+          display: none;
+        }
+        .hide-md-lg {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        overflow-x: auto;
+      }
+      code {
+        font-family: monospace;
+        color: #d63384;
+      }
+      .separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+      }
+      .separator hr {
+        border: none;
+        height: 1px;
+        width: 40%;
+        background: linear-gradient(to right, #ccc, #333, #ccc);
+      }
+      .separator span {
+        margin: 0 10px;
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+      }
+      .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .nav-buttons a {
+        background-color: #d63384;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .nav-buttons a:hover {
+        background-color: #c02672;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 style="text-align: center">
+        Educative - Interactive Courses for Software Developers
+      </h1>
+
+      <form action="/action_page.php">
+        <div class="row">
+          <h3 style="text-align: center">Log in to Educative</h3>
+          <div class="vl">
+            <span class="vl-innertext">or</span>
+          </div>
+
+          <div class="col">
+            <a href="#" class="fb btn">
+              <i class="fa fa-facebook-square" aria-hidden="true"></i> Login
+              with Facebook
+            </a>
+            <a href="#" class="twitter btn">
+              <i class="fa fa-twitter-square" aria-hidden="true"></i> Login with
+              Twitter
+            </a>
+            <a href="#" class="linkedin btn">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i> Login
+              with LinkedIn
+            </a>
+          </div>
+
+          <div class="col">
+            <div class="hide-md-lg">
+              <p>Or sign in manually:</p>
+            </div>
+
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <input
+              type="submit"
+              type="button"
+              value="Login"
+              onclick="reset()"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="bottom-container">
+      <div class="row">
+        <div class="col">
+          <a href="#" style="color: white" class="btn">Sign up</a>
+        </div>
+        <div class="col">
+          <a href="#" style="color: white" class="btn">Forgot password?</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="separator">
+      <hr />
+      <span>Code Preview</span>
+      <hr />
+    </div>
+
+    <pre><code>
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Educative - Interactive Courses for Software Developers&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot; /&gt;
+    &lt;style&gt;
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        position: relative;
+        border-radius: 5px;
+        background-color: #e7e3f3;
+        padding: 20px 0 30px 0;
+      }
+
+      button,
+      input,
+      .btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        margin: 5px 0;
+        opacity: 0.85;
+        display: inline-block;
+        font-size: 17px;
+        line-height: 20px;
+        text-decoration: none;
+      }
+
+      input:hover,
+      .btn:hover {
+        opacity: 1;
+      }
+
+      .fb {
+        background-color: #3b5998;
+        color: white;
+      }
+
+      .twitter {
+        background-color: #55acee;
+        color: white;
+      }
+
+      .linkedin {
+        background-color: #0e1b4a;
+        color: white;
+      }
+
+      input[type=&quot;submit&quot;] {
+        background-color: #6d37bc;
+        color: white;
+        cursor: pointer;
+      }
+
+      input[type=&quot;submit&quot;]:hover {
+        background-color: #45a049;
+      }
+
+      .col {
+        float: left;
+        width: 50%;
+        margin: auto;
+        padding: 0 50px;
+        margin-top: 6px;
+      }
+
+      .row:after {
+        content: &quot;&quot;;
+        display: table;
+        clear: both;
+      }
+
+      .vl {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        border: 2px solid #ddd;
+        height: 175px;
+      }
+
+      .vl-innertext {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        padding: 8px 10px;
+      }
+
+      .hide-md-lg {
+        display: none;
+      }
+
+      .bottom-container {
+        text-align: center;
+        background-color: #37169ab2;
+        border-radius: 0px 0px 4px 4px;
+      }
+
+      @media screen and (max-width: 650px) {
+        .col {
+          width: 100%;
+          margin-top: 0;
+        }
+        .vl {
+          display: none;
+        }
+        .hide-md-lg {
+          display: block;
+          text-align: center;
+        }
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;h1 style=&quot;text-align: center&quot;&gt;
+        Educative - Interactive Courses for Software Developers
+      &lt;/h1&gt;
+
+      &lt;form action=&quot;/action_page.php&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+          &lt;h3 style=&quot;text-align: center&quot;&gt;Log in to Educative&lt;/h3&gt;
+          &lt;div class=&quot;vl&quot;&gt;
+            &lt;span class=&quot;vl-innertext&quot;&gt;or&lt;/span&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&quot;col&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;fb btn&quot;&gt;
+              &lt;i class=&quot;fa fa-facebook-square&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Login
+              with Facebook
+            &lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;twitter btn&quot;&gt;
+              &lt;i class=&quot;fa fa-twitter-square&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Login with
+              Twitter
+            &lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;linkedin btn&quot;&gt;
+              &lt;i class=&quot;fa fa-linkedin-square&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Login
+              with LinkedIn
+            &lt;/a&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&quot;col&quot;&gt;
+            &lt;div class=&quot;hide-md-lg&quot;&gt;
+              &lt;p&gt;Or sign in manually:&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;input
+              type=&quot;text&quot;
+              name=&quot;username&quot;
+              placeholder=&quot;Username&quot;
+              required
+            /&gt;
+            &lt;input
+              type=&quot;password&quot;
+              name=&quot;password&quot;
+              placeholder=&quot;Password&quot;
+              required
+            /&gt;
+            &lt;input
+              type=&quot;submit&quot;
+              type=&quot;button&quot;
+              value=&quot;Login&quot;
+              onclick=&quot;reset()&quot;
+            /&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;bottom-container&quot;&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col&quot;&gt;
+          &lt;a href=&quot;#&quot; style=&quot;color: white&quot; class=&quot;btn&quot;&gt;Sign up&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col&quot;&gt;
+          &lt;a href=&quot;#&quot; style=&quot;color: white&quot; class=&quot;btn&quot;&gt;Forgot password?&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+
+    <div class="separator">
+      <hr />
+      <span>Bottom</span>
+      <hr />
+    </div>
+
+    <div class="nav-buttons">
+      <a href="../index.html">Back to Challenges</a>
+    </div>
+  </body>
+</html>
