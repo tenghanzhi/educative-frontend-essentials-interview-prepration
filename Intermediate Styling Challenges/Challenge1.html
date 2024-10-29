@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Floats Challenges 1</title>
+
+    <style>
+      body {
+        font: 1.2em / 1.5 Helvetica Neue;
+        margin: 20px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        overflow-x: auto;
+      }
+      code {
+        font-family: monospace;
+        color: #d63384;
+      }
+      .separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+      }
+      .separator hr {
+        border: none;
+        height: 1px;
+        width: 40%;
+        background: linear-gradient(to right, #ccc, #333, #ccc);
+      }
+      .separator span {
+        margin: 0 10px;
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+      }
+      .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .nav-buttons a {
+        background-color: #d63384;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .nav-buttons a:hover {
+        background-color: #c02672;
+      }
+      .box {
+        width: 90%;
+        padding: 0.5em;
+      }
+      .float {
+        margin: 15px;
+        width: 150px;
+        height: 150px;
+        color: white;
+        border-radius: 5px;
+        background-color: steelblue;
+        padding-top: 3em;
+        text-align: center;
+      }
+      .float1 {
+        float: left;
+      }
+      .float2 {
+        float: right;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="float float1">One</div>
+      <div class="float float2">Two</div>
+      <p>The two boxes should float to either side of this text.</p>
+    </div>
+    <div class="separator">
+      <hr />
+      <span>Code Preview</span>
+      <hr />
+    </div>
+    <pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      .box &#123;
+        width: 90%;
+        padding: 0.5em;
+      &#125;
+      .float &#123;
+        margin: 15px;
+        width: 150px;
+        height: 150px;
+        color: white;
+        border-radius: 5px;
+        background-color: steelblue;
+        padding-top: 3em;
+        text-align: center;
+      &#125;
+      .float1 &#123;
+        float: left;
+      &#125;
+      .float2 &#123;
+        float: right;
+      &#125;
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="box"&gt;
+      &lt;div class="float float1"&gt;One&lt;/div&gt;
+      &lt;div class="float float2"&gt;Two&lt;/div&gt;
+      &lt;p&gt;The two boxes should float to either side of this text.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+
+    <div class="separator">
+      <hr />
+      <span>Bottom</span>
+      <hr />
+    </div>
+
+    <div class="nav-buttons">
+      <a href="../index.html">Back to Challenges</a>
+      <a href="./Challenge2.html">Next Challenge</a>
+    </div>
+  </body>
+</html>

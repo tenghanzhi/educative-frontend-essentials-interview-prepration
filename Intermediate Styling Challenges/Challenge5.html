@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioned Elements within Containers</title>
+
+    <style>
+      /* Basic Styling */
+      body {
+        font: 1.2em / 1.5 Helvetica Neue, Arial, sans-serif;
+        margin: 20px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Container and Inner Box Styling */
+      .container,
+      .inner {
+        position: relative;
+        padding: 0.5em;
+        margin: 1em;
+        border: 5px solid #ccc;
+      }
+
+      /* Positioned Elements */
+      #first,
+      #second {
+        width: 150px;
+        height: 150px;
+        background-color: steelblue;
+        color: white;
+        text-align: center;
+        padding-top: 3em;
+        position: absolute;
+      }
+
+      #first {
+        top: 0;
+        right: 0;
+      }
+
+      #second {
+        bottom: 0;
+        left: 0;
+      }
+
+      /* Separator Styles */
+      .separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+      }
+      .separator hr {
+        border: none;
+        height: 1px;
+        width: 40%;
+        background: linear-gradient(to right, #ccc, #333, #ccc);
+      }
+      .separator span {
+        margin: 0 10px;
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+      }
+
+      /* Code Display */
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        overflow-x: auto;
+        font-family: monospace;
+        color: #d63384;
+      }
+
+      /* Navigation Buttons */
+      .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .nav-buttons a {
+        background-color: #d63384;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .nav-buttons a:hover {
+        background-color: #c02672;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="inner">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          euismod at est maximus ultrices. Sed nec mauris vulputate justo
+          euismod consectetur. Nulla euismod posuere sem, vel interdum sapien
+          interdum sed. Maecenas ante risus, porttitor ac mollis eget, malesuada
+          eget nunc. Duis accumsan commodo diam porttitor blandit. Pellentesque
+          fringilla odio nulla. Curabitur ac nulla nec odio venenatis
+          ullamcorper eget nec ipsum. In sed metus tempor, efficitur orci quis,
+          tincidunt ipsum. Vivamus facilisis auctor ligula.
+        </p>
+        <div id="first">First</div>
+      </div>
+      <div class="inner">
+        <div id="second">Second</div>
+        <p>
+          Etiam aliquet consectetur vulputate. Vestibulum consequat felis a
+          ligula posuere placerat. Curabitur commodo tortor egestas, molestie
+          leo molestie, faucibus arcu. Praesent tincidunt nisi eget turpis
+          tristique, sit amet rutrum ex sagittis. Pellentesque ut arcu et sapien
+          interdum consequat consectetur nec mi. Nunc volutpat sapien odio, id
+          pulvinar mi mollis eget. Suspendisse sit amet purus suscipit nulla
+          fringilla interdum. Duis egestas eleifend dui, vitae vulputate quam
+          efficitur nec. Cras ac massa quis lacus mollis congue. Etiam rutrum
+          odio sodales lectus interdum, non sollicitudin ex rhoncus. Ut dictum
+          enim sapien, quis mollis dolor efficitur nec.
+        </p>
+      </div>
+    </div>
+
+    <div class="separator">
+      <hr />
+      <span>Code Preview</span>
+      <hr />
+    </div>
+
+    <pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      .container, .inner &#123;
+        position: relative;
+        padding: 0.5em;
+        margin: 1em;
+        border: 5px solid #ccc;
+      &#125;
+      #first, #second &#123;
+        width: 150px;
+        height: 150px;
+        background-color: steelblue;
+        color: white;
+        text-align: center;
+        padding-top: 3em;
+        position: absolute;
+      &#125;
+      #first &#123;
+        top: 0;
+        right: 0;
+      &#125;
+      #second &#123;
+        bottom: 0;
+        left: 0;
+      &#125;
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="container"&gt;
+      &lt;div class="inner"&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+        &lt;div id="first"&gt;First&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="inner"&gt;
+        &lt;div id="second"&gt;Second&lt;/div&gt;
+        &lt;p&gt;Etiam aliquet consectetur vulputate...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+
+    <div class="separator">
+      <hr />
+      <span>Bottom</span>
+      <hr />
+    </div>
+
+    <div class="nav-buttons">
+      <a href="./Challenge4.html">Previous Challenge</a>
+      <a href="../index.html">Back to Challenges</a>
+    </div>
+  </body>
+</html>

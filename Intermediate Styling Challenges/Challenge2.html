@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Floats Challenges 2</title>
+
+    <style>
+      body {
+        font: 1.2em / 1.5 Helvetica Neue;
+        margin: 20px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        overflow-x: auto;
+      }
+      code {
+        font-family: monospace;
+        color: #d63384;
+      }
+
+      /* Separator Style */
+      .separator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+      }
+      .separator hr {
+        border: none;
+        height: 1px;
+        width: 40%;
+        background: linear-gradient(to right, #ccc, #333, #ccc);
+      }
+      .separator span {
+        margin: 0 10px;
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+      }
+
+      /* Navigation Buttons */
+      .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .nav-buttons a {
+        background-color: #d63384;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .nav-buttons a:hover {
+        background-color: #c02672;
+      }
+
+      /* Box and Float Styles */
+      .box {
+        width: 100%;
+        background-color: coral;
+        padding: 10px;
+        color: white;
+        float: left;
+      }
+      .float {
+        margin: 15px;
+        width: 150px;
+        height: 150px;
+        border-radius: 5px;
+        background-color: steelblue;
+        padding-top: 3em;
+        text-align: center;
+        float: right;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="float">Float</div>
+      <p>This sentence appears next to the float.</p>
+    </div>
+
+    <div class="separator">
+      <hr />
+      <span>Code Preview</span>
+      <hr />
+    </div>
+
+    <pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      .box &#123;
+        width: 100%;
+        background-color: coral;
+        padding: 10px;
+        color: white;
+        float: left;
+      &#125;
+      .float &#123;
+        margin: 15px;
+        width: 150px;
+        height: 150px;
+        border-radius: 5px;
+        background-color: steelblue;
+        padding-top: 3em;
+        text-align: center;
+        float: right;
+      &#125;
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="box"&gt;
+      &lt;div class="float"&gt;Float&lt;/div&gt;
+      &lt;p&gt;This sentence appears next to the float.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+
+    <div class="separator">
+      <hr />
+      <span>Bottom</span>
+      <hr />
+    </div>
+
+    <div class="nav-buttons">
+      <a href="./Challenge1.html">Previous Challenge</a>
+      <a href="../index.html">Back to Challenges</a>
+      <a href="./Challenge3.html">Next Challenge</a>
+    </div>
+  </body>
+</html>
